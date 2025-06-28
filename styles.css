@@ -217,6 +217,25 @@ body {
     margin-bottom: 30px;
 }
 
+.hero-since {
+    color: var(--light-blue);
+    font-size: 1.1rem;
+    font-weight: var(--font-semibold);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.since-badge {
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: var(--font-bold);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
 .hero-buttons {
     display: flex;
     gap: 20px;
