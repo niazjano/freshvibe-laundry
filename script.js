@@ -356,4 +356,6 @@ window.addEventListener('scroll', debounce(() => {
             link.classList.add('active');
         }
     });
-}, 100)); 
+}, 100));
+
+ 

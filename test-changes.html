@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Changes - Freshvibe Laundry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFD700 50%, #FFA500 100%);
+        }
+        .test-box {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo {
+            height: 40px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        .logo.ripple {
+            animation: logoRipple 1.5s ease-out;
+        }
+        @keyframes logoRipple {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .floating-clothes {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        .clothes-item {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            background: white;
+            border-radius: 8px;
+            opacity: 0;
+            animation: floatIn 3s ease-out forwards;
+        }
+        .clothes-item:nth-child(1) { left: 10%; animation-delay: 0.5s; }
+        .clothes-item:nth-child(2) { left: 30%; animation-delay: 1s; }
+        .clothes-item:nth-child(3) { left: 50%; animation-delay: 1.5s; }
+        @keyframes floatIn {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(150px) rotate(360deg); opacity: 0; }
+        }
+        .cta-button {
+            background: #FF6B35;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <h1>✅ Changes Verification</h1>
+        <p>If you can see this page, the server is working correctly.</p>
+    </div>
+
+    <div class="test-box">
+        <h2>🎨 Animation Tests</h2>
+        
+        <h3>1. Logo Ripple Effect</h3>
+        <img src="Images/logo.png" alt="Logo" class="logo" id="testLogo">
+        <button onclick="testLogoRipple()">Test Logo Ripple</button>
+        
+        <h3>2. Floating Clothes Animation</h3>
+        <div class="floating-clothes">
+            <div class="clothes-item"></div>
+            <div class="clothes-item"></div>
+            <div class="clothes-item"></div>
+        </div>
+        
+        <h3>3. Button Hover Effect</h3>
+        <a href="#" class="cta-button">Test Button Hover</a>
+    </div>
+
+    <div class="test-box">
+        <h2>📞 Contact Name Change</h2>
+        <p><strong>Contact Person:</strong> John Capitin</p>
+        <p><em>This should show "John Capitin" instead of "Myra Sulat"</em></p>
+    </div>
+
+    <div class="test-box">
+        <h2>🌅 Time-based Theme</h2>
+        <p>Current background should change based on time of day:</p>
+        <ul>
+            <li>Morning (6AM-12PM): Warm sunrise colors</li>
+            <li>Afternoon (12PM-6PM): Bright sky colors</li>
+            <li>Night (6PM-6AM): Cool blue/purple colors</li>
+        </ul>
+    </div>
+
+    <script>
+        function testLogoRipple() {
+            const logo = document.getElementById('testLogo');
+            logo.classList.remove('ripple');
+            setTimeout(() => {
+                logo.classList.add('ripple');
+            }, 100);
+        }
+        
+        // Auto-test logo ripple on page load
+        setTimeout(() => {
+            testLogoRipple();
+        }, 1000);
+    </script>
+</body>
+</html> 
